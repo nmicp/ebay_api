@@ -1,0 +1,527 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>eBay’s API Data Pipeline &#8212; eBay&#39;s API Data Pipeline</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.d59cb220de22ca1c485ebbdc042f0030.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting Started with eBay’s APIs" href="2_chapter.html" />
+    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
+      <img src="_static/steps.jpg" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">eBay's API Data Pipeline</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Welcome to your Jupyter Book
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown.html">
+   Markdown Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Content with notebooks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="markdown-notebooks.html">
+   Notebooks with MyST Markdown
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   <strong>
+    eBay’s API Data Pipeline
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="2_chapter.html">
+   <strong>
+    Getting Started with eBay’s APIs
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="3_chapter.html">
+   <strong>
+    Getting Data from eBay
+   </strong>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/1_chapter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F1_chapter.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/1_chapter.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preliminaries">
+   <strong>
+    Preliminaries
+   </strong>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-this-manual-about">
+     <strong>
+      What Is this Manual About?
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#description-of-ebay-s-api-data-pipeline">
+     <strong>
+      Description of eBay’s API Data Pipeline
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#key-concepts">
+     <strong>
+      Key Concepts
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>eBay’s API Data Pipeline</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#preliminaries">
+   <strong>
+    Preliminaries
+   </strong>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#what-is-this-manual-about">
+     <strong>
+      What Is this Manual About?
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#description-of-ebay-s-api-data-pipeline">
+     <strong>
+      Description of eBay’s API Data Pipeline
+     </strong>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#key-concepts">
+     <strong>
+      Key Concepts
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="tex2jax_ignore mathjax_ignore section" id="ebays-api-data-pipeline">
+<h1><strong>eBay’s API Data Pipeline</strong><a class="headerlink" href="#ebays-api-data-pipeline" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="preliminaries">
+<h2><strong>Preliminaries</strong><a class="headerlink" href="#preliminaries" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-this-manual-about">
+<h3><strong>What Is this Manual About?</strong><a class="headerlink" href="#what-is-this-manual-about" title="Permalink to this headline">¶</a></h3>
+<p>This manual aims to provide technical guidance and documentation to the process of building an automated data pipeline from eBay’s developer’s program for research purposes. Specific technical documentation will walk through the process of accessing eBay’s Application Programming Interface (API), and documenting the code that collects the data. This is a product of the capstone project, “Network Mobility of Illicit Cultural Property” developed by the UVA Data Science School and the <a href="https://curialab.org/">Cultural Resilience Informatics and Analysis (CURIA) Lab</a>.</p>
+<p>This research project stems from research of online marketplace as platforms for illicit trade. The scale of global art crime has been difficult to quantify due to the vast number of transactions and varying methods of trade. The illicit antiquities trade has moved away from physical specialist shops in favor of online buying and selling platforms such as eBay. These online platforms characterized by transactions and vendors offering heterogeneous goods have not been systematically studied due to its data-intensive nature. This project designs a robust data pipeline that collects, processes, and stores data to quantify and analyze the network mobility of illicit cultural property. The data pipeline consists of a template for accessing eBay’s API, understanding API documentation, and collecting necessary features for future analysis. The metadata for building and maintaining the data pipeline is recorded in an in-depth guide to account for data collection bias.</p>
+<p>In this documentation we organize the use-case of this data pipeline in the following manner.</p>
+<p><strong>Chapter 1: Preliminaries</strong></p>
+<p>This documentation begins by explaining the basic technological concepts needed to build an API. This chapter will also include a dictionary of the eBay categories used to extract the necessary data from the listings in the antiques categories. The chapter includes a data modeling section that explains the SQL schema of building a relational database.</p>
+<p><strong>Chapter 2: Getting Started with eBay’s APIs</strong></p>
+<p>The second chapter provides a theoretical framework of picking these APIs, data description, and a section of legal and ethical challenges will also be included in this chapter. This is a user-friendly and comprehensive description of eBay’s API documentation, focused on the Shopping and the Finding APIs.</p>
+<p><strong>Chapter 3: Getting Data from eBay</strong></p>
+<p>Finally, the third chapter focuses on the specific implementation of the data pipeline architecture in python. This chapter includes a step-by-step guide on how to obtain this data from a recursive script, and also a tutorial to run these activities from the Rivanna UVA platform that facilitates the data storage systems. The result of this data pipeline framework is a replicable blueprint for interacting with an online marketplace’s API environment. This project will act as a precursor to begin research regarding the global trade of illicit cultural property through subsequent network and spatial analysis.</p>
+<p>The updated version of this manual is 2022-04-13.</p>
+</div>
+<div class="section" id="description-of-ebay-s-api-data-pipeline">
+<h3><strong>Description of eBay’s API Data Pipeline</strong><a class="headerlink" href="#description-of-ebay-s-api-data-pipeline" title="Permalink to this headline">¶</a></h3>
+<p><strong>General Workflow of eBay’s Data Pipeline</strong></p>
+<p>The following flowcharts should help navigate the process of building the data pipeline. Specifics will not be highlighted in the roadmap, but will reference future chapters that dive into each section. Definitions of technical terms in this diagram can be found in chapter 1.</p>
+<p><em>Figure 1</em> highlights the general structure of how we built out this eBay data pipeline for research. The first step of getting data from eBay’s developer’s program was to get API keys. The steps of collecting these keys are described in the Understanding API chapter while the implementation of a Flask app is in chapter 3. This connection will only need to be completed once per project.</p>
+<p>Next, we build the data pipeline in python script. This is highlighted in steps B through D - see the below diagrams. This recursive data collection method runs every 24 hours to collect the most up-to-date data from eBay categories of interest. This general procedure ranges from collecting the access keys to running an automated script. This algorithm consists of three main activities in an automated fashion: connecting to the desired API (Shopping and Finding API), mining the data, and saving the information in a SQL database. Specific background knowledge on these steps can be found in chapter “Getting Started with eBay’s API”. Implementation of this framework in python can be found in “Getting Data from eBay”. The last step of the roadmap — analysis — is open for social research. In the previous steps, we set-up a pipeline that cleans and stores data that is accessible through a csv file. In the analysis section, this csv file can be downloaded to be used in future analysis and research. Information on how to access the data for analysis can be found in “Accessing Data with Datasette”.</p>
+<img src="fig1.jpg" width=200 height=350 />
+<p>This section provides a high-level overview of each of the critical stages in the data collection and processing pipeline. More information about each step will be discussed in the following chapters.</p>
+<p><strong>Diagram A</strong> outlines the necessary steps to make an initial connection to eBay’s API system and gain access to their data. First, interested parties are required to create a developer’s program and apply for application access keys. They are then required to construct a RESTful API to communicate with eBay’s system and receive developer tokens. These tokens are unique and should be stored in a secret .env file located in the same directory as the other project scripts. More information regarding getting access to eBay’s API can be found in the beginning of chapter 3.</p>
+<img src="fig2.jpg" width=400 height=500 />
+<p><strong>Diagram B</strong> describes the need of having a basic understanding of the functions of eBay’s API and documentation. In general, once a successful connection to eBay has been established, users will need to read through and understand eBay’s documentation and syntax to interface with APIs of interest. For our use case, the Finding and Shopping APIs to get data for our features of interest. More specific information about the language of the eBay developer’s program can be found in chapter 2.</p>
+<img src="fig3.jpg" width=300 height=380 />
+<p><strong>Diagram C</strong> provides an overview on the method of how data is extracted and cleaned. The extracted raw data is converted to a tabular format, and other cleaning processes are performed using a series of nested loops. Details on the code that implements this can be found in chapter 3. This section describes the recursive nature that is completed automatically every day when script runs to collect data from eBay.</p>
+<img src="fig4.jpg" width=300 height=380 />
+<p><strong>Diagram D</strong> provides a framework for data storage and retrieval. Once the data has been successfully processed into a clean table, we store it for later use. A permanent storage space comes in the form of tables in a dedicated SQL database. If the table does not exist, it must be created. However, if the table already exists then the processed data is simply appended to it. We create a table once, and keep updating the table with the newest data we collect each day. This recursive nature of storing data can be found in chapter 3.</p>
+<img src="fig5.jpg" width=300 height=380 />
+</div>
+<div class="section" id="key-concepts">
+<h3><strong>Key Concepts</strong><a class="headerlink" href="#key-concepts" title="Permalink to this headline">¶</a></h3>
+<p>This chapter aims to explain key concepts essential to the automated data collection process through eBay’s API.</p>
+<p><strong>1) Data Types:</strong></p>
+<p>Data types are an important aspect in programming that help determine the type of the object’s value. Some examples include numeric, alphanumeric, decimal values. Their differences lie in the types of operations the computer system can perform.</p>
+<p>There are a variety of data types. Generally, data types can be classified into two categories: primitive/structure and composite. Primitive data types are native to the processor; they have a one-to-one correspondence with objects in the computer’s memory (a common data type of this class is an integer – whole number). Composite data types are constructed in the program out of primitive data types and other aggregate data types. A dictionary is an example of this category.</p>
+<p>To avoid confusion, let us start by describing the main data types used in the eBay documentation and how these concepts might differ from ordinary use. For example, the use of float and decimal types in the world of programming and in eBay’s APIs may differ. Intuitively, we may think that a float is used as a decimal number in the calculator; however, an eBay decimal type contains different elements that are not necessarily numbers separated by decimal points. Therefore, as the meanings of data types can vary, we will explain them throughout this manual.</p>
+<div class="alert alert-block alert-info"><b>Tip:</b> Missing data on eBay results in the key:value pairs sometimes not existing for specific listings. Missing data from eBay results in missing data in the dataframe. This missing data is read into the python table as a missing data type. However, when stored into a SQL database, this variable type is changed into a string (words) that state “None”. Since SQL databases do not allow missing rows, we substitute this as a word highlighting missing data. In future analysis, one can filter the “None” text to remove missing values.</div>
+<p>In the following table presents eBay’s schema types with examples:</p>
+<p><em>Table 1.</em> Primitive Data Types with examples</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data   Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>String</p></td>
+<td><p>contains one or   more characters, which can include numbers, letters, and other terms. The use   of quotes ‘’ or double “” ensures that the element can be recognized as a   string.</p></td>
+<td><p><code>Item_ID</code>           <code><CategoryParent>string </CategoryParent></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Boolean</p></td>
+<td><p>represents   binary-valued logic with values of true   or false. These can be   represented as 0 (for false) and 1(for true).</p></td>
+<td><p><code> {true, false}</code>           <code> {1, 0}</code></p></td>
+</tr>
+<tr class="row-even"><td><p>Int</p></td>
+<td><p>An integer is a   numeric value without a decimal point. Integers are whole numbers; they can   be positive, negative, or zero.</p></td>
+<td><p><code>-1, 0,   126789675, +100000</code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Float</p></td>
+<td><p>A number with a   decimal point using 32 bit data (whole numbers may omit the decimal point).   By using a float you can control where to locate the decimal point.</p></td>
+<td><p><code> 1E4, 1267.43233E12, 12.78e-2, 12 , -0, 0 </code>     <code>INF </code></p></td>
+</tr>
+<tr class="row-even"><td><p>Double</p></td>
+<td><p>A number with a   decimal point using 64 bit data. Double float number may  contain the digits 0-9, a hyphen to   designate negative numbers, and a period (“.”) as the decimal separator. A   common application is monetary values</p></td>
+<td><p><code>12678967.543233</code></p></td>
+</tr>
+<tr class="row-odd"><td><p>Decimal</p></td>
+<td><p>In contrast to   float and double, which use rounding, decimal preserves all the digits.</p></td>
+<td><p><code>   -1.23,+100000.00, 210.      </code></p></td>
+</tr>
+<tr class="row-even"><td><p>dateTime</p></td>
+<td><p>It stores a   specific instant of time (start and end times). Its format is YYYY-MM-DD and   it records Universal Coordinated Time (UTC). Alternatively, it can represent   the official eBay time.</p></td>
+<td><p><code> 2022-01-10T12:00:00-05:00</code>           2022-01-10T17:00:00Z,   five hours later than 2022-01-10T12:00:00Z.</p></td>
+</tr>
+<tr class="row-odd"><td><p>Duration</p></td>
+<td><p>It contains a   length of time and usually conveys the time left before a listing ends. Their   format is as follows:     P (period),     nY (number of   years).     nM (number of   months)     nD (number of   days),      T (date/time   separator),     nH (number of   hours),      nM (number of   minutes),     nS (the number   of seconds)</p></td>
+<td><p><code>PnYnMnDTnH nMnS   </code>            (e.g., P2DT23H32M51S)      “ period of 2 days, 23   hours, 32 minutes, and 51 seconds”.</p></td>
+</tr>
+</tbody>
+</table>
+<p>For explanatory purposes, the documentation of the different eBay APIs includes several composite data types. Here we will focus on the types most used in the shopping API.</p>
+<p><em>Table 2.</em> Composite Data Types with examples:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Data Type</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Example</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Dictionary</p></td>
+<td><p>It is a collection of key values (unique identifier) that refer   to objects. Each key is associated with only one item, so it can be used to   find a particular set of data. Typically, keys are simple datatypes – usually   alphanumeric strings.            A dictionary data type can support operations, such as   retrieving, inserting, or updating values.</p></td>
+<td><p># empty dictionary     <code>my_dict   = {}</code>           # dictionary with integer keys     <code>my_dict = {1: ‘orange’, 2:   ‘ball’}</code>           # dictionary with mixed keys     <code> my_dict = {‘name’: ‘Nick’, 1: [2, 4,   3]}</code>           # using dict()     <code>my_dict =dict({1:’lemon’,   2:’rule’})</code>           # from sequence having each item as a pair     <code>my_dict =   dict([(1,’orange’),(2,’ball’)])</code></p></td>
+</tr>
+<tr class="row-odd"><td><p>token</p></td>
+<td><p>A token is an abbreviation   in which white spaces are removed.</p></td>
+<td><p><code><ShippingServiceName> token</ShippingServiceName></code></p></td>
+</tr>
+<tr class="row-even"><td><p>AmountType</p></td>
+<td><p>It is a double   type (64 bit) that specifies a monetary value – fees, prices, etc. - and   currency.</p></td>
+<td><p><code>&lt;Group1MaxFlatShippingCostcurrencyID=”CurrencyCodeType”&gt; AmountType (double)</Group1MaxFlatShippingCost></code></p></td>
+</tr>
+<tr class="row-odd"><td><p>CountryCodeType</p></td>
+<td><p>It is a token   data type that contains two-letter country codes.</p></td>
+<td><p><code><DestinationPostalCode> string</DestinationPostalCode></code></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>2) Application Programming Interface (API):</strong></p>
+<p>API is the acronym for Application Programming Interface. APIs serve as intermediaries through an online connection or set of programming codes. For example: a server receives a data query, parses responses, and sends instructions between a data provider and an end-user.</p>
+<p>To perform this intermediary role, APIs use standards, such as Hypertext Transfer Protocol (HTTP), and other Internet applications. APIs use different types of files to access information, such as XML and JSON format files. We will explain those file types in future sections.</p>
+<p><strong>3) Extensible Msrkup Languaje (XML):</strong></p>
+<p>XML stands for eXtensible Markup Language. We use it to store and transport data. XML facilitates communication between humans and machines. Due to its easy-to-read to read format, it is widely developed in APIs. This language uses a serialization process (translating a data type into a format that can be easily stored or transmitted over a computer network to be later reconstructed in a different environment). The versatility of this format is highly appealing in the API data collection.</p>
+<p><strong>4) JSON Format:</strong></p>
+<p>JSON is a text-based data format for storing and exchanging information.  JSON data are used to send HTTP requests between applications. They are structured as a collection of key-value pairs, in which the key must be a type string followed by one of the following data types: numbers, boolean, array, etc. (See description of data types)</p>
+<p>There are two valid types of JSON formats: a collection of key-value pairs enclosed by curly braces {}, or an ordered list of key-value pairs separated by commas and enclosed by a pair of square brackets []. See examples at this link:</p>
+<p><a href="https://developer.ebay.com/devzone/finding/CallRef/Samples/findItemsByCategory_basic_out_json.txt">JSON Format Samples</a></p>
+<p><strong>5) Simple Linux Utility for Resource Management (Slurm):</strong></p>
+<p>Slurm Workload Manager is a free and open-resource job scheduler for Linux and Unix-Like kernels. <a href="https://www.rc.virginia.edu/userinfo/rivanna/slurm/" target="_blank">(Slurm)</a> allows users to prepare their computational workloads, or jobs, on allocated nodes to send them to a job controller. The controller oversees running on login nodes, scheduling, and monitoring the jobs in each period.</p>
+<p>Slurm makes it easy for users to perform jobs in an automated manner in a time frame without the need to be present to review the process. For example, we scheduled a job to acquire seniority data for this capstone project starting at midnight. This facilitated the data collection, given the company’s policy of restricting daily calls to the Shopping API to 5,000 calls.</p>
+<p><strong>6) SQL database:</strong></p>
+<p>Structured Query Language -SQL- is used to manage relational databases. A <a href="https://jkropko.github.io/surfing-the-data-pipeline/ch7.html" target="_blank"> relational data model</a> involves the use of data tables that collect groups of elements into relations. Each table contains columns and rows with a primary key identifying each row. Columns are attributes of labeled elements. Rows represent single items that belong to a type of entity.  The organization of a relational database must provide derivability, redundancy, and consistency in the data. See <em>figure 2</em> below</p>
+<p><em>Figure 2</em>. Feature schema for Item table stored in SQLite database</p>
+<img src="fig6.jpg" width=400 height=600 />
+<p><strong>7) Flask Application:</strong></p>
+<p>Flask is a lightweight Python web framework that provides useful tools and features for creating web applications in the Python language. We implement a flask application to connect to eBay’s API. The specific implementation can be found in the next chapter.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+            
+                <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="markdown-notebooks.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title">Notebooks with MyST Markdown</p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="2_chapter.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Getting Started with eBay’s APIs</strong></p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
+</div>
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Elizabeth Lee, Nicholas Landi, Felipe Barraza, Karolina Naranjo-Velasco<br/>
+    
+        &copy; Copyright 2021.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
