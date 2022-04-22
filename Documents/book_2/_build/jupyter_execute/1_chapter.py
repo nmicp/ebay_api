@@ -28,7 +28,7 @@
 # The updated version of this manual is 2022-04-13. 
 # 
 
-# #### **Description of eBay's API Data Pipeline** 
+# ### **Description of eBay's API Data Pipeline** 
 # 
 # **General Workflow of eBay’s Data Pipeline**
 # 
@@ -40,13 +40,13 @@
 # Next, we build the data pipeline in python script. This is highlighted in steps B through D - see the below diagrams. This recursive data collection method runs every 24 hours to collect the most up-to-date data from eBay categories of interest. This general procedure ranges from collecting the access keys to running an automated script. This algorithm consists of three main activities in an automated fashion: connecting to the desired API (Shopping and Finding API), mining the data, and saving the information in a SQL database. Specific background knowledge on these steps can be found in chapter “Getting Started with eBay’s API”. Implementation of this framework in python can be found in “Getting Data from eBay”. The last step of the roadmap — analysis — is open for social research. In the previous steps, we set-up a pipeline that cleans and stores data that is accessible through a csv file. In the analysis section, this csv file can be downloaded to be used in future analysis and research. Information on how to access the data for analysis can be found in “Accessing Data with Datasette”. 
 # 
 # 
-# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig1.jpg" width=200 height=430 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig1.jpg" width=200 height=500 />
 # 
 # This section provides a high-level overview of each of the critical stages in the data collection and processing pipeline. More information about each step will be discussed in the following chapters. 
 # 
 # **Diagram A** outlines the necessary steps to make an initial connection to eBay's API system and gain access to their data. First, interested parties are required to create a developer's program and apply for application access keys. They are then required to construct a RESTful API to communicate with eBay's system and receive developer tokens. These tokens are unique and should be stored in a secret .env file located in the same directory as the other project scripts. More information regarding getting access to eBay’s API can be found in the beginning of chapter 3. 
 # 
-# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig2.jpg" width=400 height=500 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig2.jpg" width=400 height=480 />
 # 
 # **Diagram B** describes the need of having a basic understanding of the functions of eBay’s API and documentation. In general, once a successful connection to eBay has been established, users will need to read through and understand eBay's documentation and syntax to interface with APIs of interest. For our use case, the Finding and Shopping APIs to get data for our features of interest. More specific information about the language of the eBay developer’s program can be found in chapter 2. 
 # 
@@ -61,7 +61,7 @@
 # <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig5.jpg" width=300 height=380 />
 # 
 
-# #### **Key Concepts** 
+# ### **Key Concepts** 
 # 
 # This chapter aims to explain key concepts essential to the automated data collection process through eBay’s API. 
 # 
@@ -139,7 +139,7 @@
 # 
 # *Figure 2*. Feature schema for Item table stored in SQLite database 
 # 
-# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig6.jpg" width=400 height=600 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig6.jpg" width=400 height=500 />
 # 
 # **7) Flask Application:**
 # 

@@ -253,21 +253,21 @@ const thebe_selector_output = ".output, .cell_output"
      </strong>
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#description-of-ebay-s-api-data-pipeline">
-     <strong>
-      Description of eBay’s API Data Pipeline
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#key-concepts">
-     <strong>
-      Key Concepts
-     </strong>
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#description-of-ebay-s-api-data-pipeline">
+   <strong>
+    Description of eBay’s API Data Pipeline
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#key-concepts">
+   <strong>
+    Key Concepts
+   </strong>
+  </a>
  </li>
 </ul>
 
@@ -303,21 +303,21 @@ const thebe_selector_output = ".output, .cell_output"
      </strong>
     </a>
    </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#description-of-ebay-s-api-data-pipeline">
-     <strong>
-      Description of eBay’s API Data Pipeline
-     </strong>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#key-concepts">
-     <strong>
-      Key Concepts
-     </strong>
-    </a>
-   </li>
   </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#description-of-ebay-s-api-data-pipeline">
+   <strong>
+    Description of eBay’s API Data Pipeline
+   </strong>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#key-concepts">
+   <strong>
+    Key Concepts
+   </strong>
+  </a>
  </li>
 </ul>
 
@@ -345,16 +345,17 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Finally, the third chapter focuses on the specific implementation of the data pipeline architecture in python. This chapter includes a step-by-step guide on how to obtain this data from a recursive script, and also a tutorial to run these activities from the Rivanna UVA platform that facilitates the data storage systems. The result of this data pipeline framework is a replicable blueprint for interacting with an online marketplace’s API environment. This project will act as a precursor to begin research regarding the global trade of illicit cultural property through subsequent network and spatial analysis.</p>
 <p>The updated version of this manual is 2022-04-13.</p>
 </div>
+</div>
 <div class="section" id="description-of-ebay-s-api-data-pipeline">
-<h3><strong>Description of eBay’s API Data Pipeline</strong><a class="headerlink" href="#description-of-ebay-s-api-data-pipeline" title="Permalink to this headline">¶</a></h3>
+<h2><strong>Description of eBay’s API Data Pipeline</strong><a class="headerlink" href="#description-of-ebay-s-api-data-pipeline" title="Permalink to this headline">¶</a></h2>
 <p><strong>General Workflow of eBay’s Data Pipeline</strong></p>
 <p>The following flowcharts should help navigate the process of building the data pipeline. Specifics will not be highlighted in the roadmap, but will reference future chapters that dive into each section. Definitions of technical terms in this diagram can be found in chapter 1.</p>
 <p><em>Figure 1</em> highlights the general structure of how we built out this eBay data pipeline for research. The first step of getting data from eBay’s developer’s program was to get API keys. The steps of collecting these keys are described in the Understanding API chapter while the implementation of a Flask app is in chapter 3. This connection will only need to be completed once per project.</p>
 <p>Next, we build the data pipeline in python script. This is highlighted in steps B through D - see the below diagrams. This recursive data collection method runs every 24 hours to collect the most up-to-date data from eBay categories of interest. This general procedure ranges from collecting the access keys to running an automated script. This algorithm consists of three main activities in an automated fashion: connecting to the desired API (Shopping and Finding API), mining the data, and saving the information in a SQL database. Specific background knowledge on these steps can be found in chapter “Getting Started with eBay’s API”. Implementation of this framework in python can be found in “Getting Data from eBay”. The last step of the roadmap — analysis — is open for social research. In the previous steps, we set-up a pipeline that cleans and stores data that is accessible through a csv file. In the analysis section, this csv file can be downloaded to be used in future analysis and research. Information on how to access the data for analysis can be found in “Accessing Data with Datasette”.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig1.jpg" width=200 height=430 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig1.jpg" width=200 height=500 />
 <p>This section provides a high-level overview of each of the critical stages in the data collection and processing pipeline. More information about each step will be discussed in the following chapters.</p>
 <p><strong>Diagram A</strong> outlines the necessary steps to make an initial connection to eBay’s API system and gain access to their data. First, interested parties are required to create a developer’s program and apply for application access keys. They are then required to construct a RESTful API to communicate with eBay’s system and receive developer tokens. These tokens are unique and should be stored in a secret .env file located in the same directory as the other project scripts. More information regarding getting access to eBay’s API can be found in the beginning of chapter 3.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig2.jpg" width=400 height=500 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig2.jpg" width=400 height=480 />
 <p><strong>Diagram B</strong> describes the need of having a basic understanding of the functions of eBay’s API and documentation. In general, once a successful connection to eBay has been established, users will need to read through and understand eBay’s documentation and syntax to interface with APIs of interest. For our use case, the Finding and Shopping APIs to get data for our features of interest. More specific information about the language of the eBay developer’s program can be found in chapter 2.</p>
 <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig3.jpg" width=300 height=380 />
 <p><strong>Diagram C</strong> provides an overview on the method of how data is extracted and cleaned. The extracted raw data is converted to a tabular format, and other cleaning processes are performed using a series of nested loops. Details on the code that implements this can be found in chapter 3. This section describes the recursive nature that is completed automatically every day when script runs to collect data from eBay.</p>
@@ -363,7 +364,7 @@ const thebe_selector_output = ".output, .cell_output"
 <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig5.jpg" width=300 height=380 />
 </div>
 <div class="section" id="key-concepts">
-<h3><strong>Key Concepts</strong><a class="headerlink" href="#key-concepts" title="Permalink to this headline">¶</a></h3>
+<h2><strong>Key Concepts</strong><a class="headerlink" href="#key-concepts" title="Permalink to this headline">¶</a></h2>
 <p>This chapter aims to explain key concepts essential to the automated data collection process through eBay’s API.</p>
 <p><strong>1) Data Types:</strong></p>
 <p>Data types are an important aspect in programming that help determine the type of the object’s value. Some examples include numeric, alphanumeric, decimal values. Their differences lie in the types of operations the computer system can perform.</p>
@@ -457,10 +458,9 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>6) SQL database:</strong></p>
 <p>Structured Query Language -SQL- is used to manage relational databases. A <a href="https://jkropko.github.io/surfing-the-data-pipeline/ch7.html" target="_blank"> relational data model</a> involves the use of data tables that collect groups of elements into relations. Each table contains columns and rows with a primary key identifying each row. Columns are attributes of labeled elements. Rows represent single items that belong to a type of entity.  The organization of a relational database must provide derivability, redundancy, and consistency in the data. See <em>figure 2</em> below</p>
 <p><em>Figure 2</em>. Feature schema for Item table stored in SQLite database</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig6.jpg" width=400 height=600 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig6.jpg" width=400 height=500 />
 <p><strong>7) Flask Application:</strong></p>
 <p>Flask is a lightweight Python web framework that provides useful tools and features for creating web applications in the Python language. We implement a flask application to connect to eBay’s API. The specific implementation can be found in the next chapter.</p>
-</div>
 </div>
 </div>
 

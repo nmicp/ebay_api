@@ -252,16 +252,16 @@ const thebe_selector_output = ".output, .cell_output"
      </strong>
     </a>
    </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#flask-app-a-class-anchor-id-section-3-2-1-a">
+     <strong>
+      Flask App
+     </strong>
+     <a class="anchor" id="section_3_2_1">
+     </a>
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#flask-app-a-class-anchor-id-section-3-2-1-a">
-   <strong>
-    Flask App
-   </strong>
-   <a class="anchor" id="section_3_2_1">
-   </a>
-  </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#navigating-through-the-code">
@@ -293,14 +293,14 @@ const thebe_selector_output = ".output, .cell_output"
      </strong>
     </a>
    </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#final-remarks">
+     <strong>
+      Final Remarks
+     </strong>
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#final-remarks">
-   <strong>
-    Final Remarks
-   </strong>
-  </a>
  </li>
 </ul>
 
@@ -336,16 +336,16 @@ const thebe_selector_output = ".output, .cell_output"
      </strong>
     </a>
    </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#flask-app-a-class-anchor-id-section-3-2-1-a">
+     <strong>
+      Flask App
+     </strong>
+     <a class="anchor" id="section_3_2_1">
+     </a>
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#flask-app-a-class-anchor-id-section-3-2-1-a">
-   <strong>
-    Flask App
-   </strong>
-   <a class="anchor" id="section_3_2_1">
-   </a>
-  </a>
  </li>
  <li class="toc-h1 nav-item toc-entry">
   <a class="reference internal nav-link" href="#navigating-through-the-code">
@@ -377,14 +377,14 @@ const thebe_selector_output = ".output, .cell_output"
      </strong>
     </a>
    </li>
+   <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#final-remarks">
+     <strong>
+      Final Remarks
+     </strong>
+    </a>
+   </li>
   </ul>
- </li>
- <li class="toc-h1 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#final-remarks">
-   <strong>
-    Final Remarks
-   </strong>
-  </a>
  </li>
 </ul>
 
@@ -416,9 +416,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p><em>figure 3.</em> The automated data collection process. This flowchart represents the overall automated data collection process that we built. The inner box indicates a comprehensive process to collect for each category. Then, the data is concatenated and the collection process is automated each 24 hours.</p>
 <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig7.jpg" width=500 height=700 />
 </div>
-</div>
 <div class="section" id="flask-app-a-class-anchor-id-section-3-2-1-a">
-<h1><strong>Flask App</strong> <a class="anchor" id="section_3_2_1"></a><a class="headerlink" href="#flask-app-a-class-anchor-id-section-3-2-1-a" title="Permalink to this headline">¶</a></h1>
+<h2><strong>Flask App</strong> <a class="anchor" id="section_3_2_1"></a><a class="headerlink" href="#flask-app-a-class-anchor-id-section-3-2-1-a" title="Permalink to this headline">¶</a></h2>
 <p><strong>Building a Simple App</strong></p>
 <p>Getting access to eBay’s developer’s program requires users to build their own application. This requirement is a result of eBay’s marketplace account <a href="https://developer.ebay.com/marketplace-account-deletion"> deletion notification update </a>. The resulting application provides eBay with a communication channel to notify developers of marketplace deletion notifications. The architecture the application requires is relatively simple – it needs to receive eBay challenge code and respond with an output that hashes together the challenge code, the user’s eBay verification token, and the application’s endpoint. A 200 response should be produced in an output field in JSON format. An application that meets these requirements can be constructed in python using the flask package.</p>
 <p>It should be reiterated that creating an application that can successfully receive challenge code is essential to accessing eBay’s production data. Production data consists of real listings from live marketplaces. Users can also develop test code to interact with eBay’s API system through their Sandbox environment.</p>
@@ -448,6 +447,7 @@ const thebe_selector_output = ".output, .cell_output"
 </div>
 <p>The Flask application must be able to manage Hyper Text Transfer Protocol Secure (HTTPS) requests. HTTPS is the secure version of HTTP, the protocol over which data is sent between two applications. The method we used to get an https connection was through <a class="reference external" href="http://letsencrypt.com">letsencrypt.com</a>, which is a third-party website that provides a certificate to most hosted websites. The user needs to purchase a domain name in order to obtain an SSL certificate. Domains can be purchased through godaddy, Google domains, or other websites. There is no restriction on extensions. For example, we used a .club extension due to its low set up cost. After securing an SSL hosted domain for the application, login to eBay’s developer’s program and apply for Production Keys. Once Production Keys are obtained, you are ready to start building your data pipeline.</p>
 <p>For help on troubleshooting setting up a Flask app, look into UVA IT and various online resources including  <a href="https://www.digitalocean.com/community/tutorials/how-to-serve-flask-applications-with-gunicorn-and-nginx-on-ubuntu-20-04">this tutorial</a>. The flask package also has documentation that can be accessed at <a href="https://flask.palletsprojects.com/en/2.0.x/">this link</a>.</p>
+</div>
 </div>
 <div class="section" id="navigating-through-the-code">
 <h1><strong>Navigating through the Code</strong><a class="headerlink" href="#navigating-through-the-code" title="Permalink to this headline">¶</a></h1>
@@ -952,7 +952,7 @@ The -t parameter sets the time limit for which the job will stop running. For th
 This parameter notifies the associated mail-user by email when a failed event type occurs.</p>
 <p><code>#SBATCH –mail-user= &lt;user “email address”&gt;</code>
 This specifies the user’s associated email address to be notified when a failed event type occurs.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig8.jpg" width=800 height=1000 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig8.jpg" width=500 height=700 />
 <p>Once the parameters of the slurm file are set, the next step is to set up the job to run. To set this up, navigate to the folder/directory that contains the slurm script. This can be accomplished by opening a terminal (via file &gt; new &gt; terminal on Rivanna) and checking to see if the <code>pwd</code> (present working directory) matches the location of interest. To navigate to the correct directory use type in cd followed by the location of interest. Once you have confirmed that you are in the correct directory, type the function “sbatch slurm_file_name.slurm”. Hit enter, and if successful, the following message should appear “submitted batch job [number]”.</p>
 <p>There are several terminal commands that can check the status of a slurm job. These commands, and their exact syntax, are listed below:</p>
 <p><code>scontrol show [job number]</code></p>
@@ -991,37 +991,37 @@ a.	Make sure you include the first slash and double quotes!</p></li>
 </ol>
 <p>Rivanna is the University of Virginia’s high performance computing platform. This means that instead of using your local computer and storage, you can work and share files on this platform. When we are working with a lot of data — like in the case of this automated data pipeline — Rivanna provides more storage and a centralized place to collaborate. To log onto Rivanna, go to UVA’s research computing website and select <a href=" https://www.rc.virginia.edu/userinfo/rivanna/login/ ">Rivanna</a></p>
 <p>There, click on the link that says “Launch Open OnDemand”. Log into this system with your UVA ID and associated password. Once on Rivanna, click on “My Interactive Session” on the top menu bar. Then, we can select which Interactive App you would like to use. For this project, we mainly use JupyterLab — a coding interface typically used for Python. We will also use the Desktop application to access the high-level dashboard we create. When using Rivanna, you have the option of customizing the number of hours you plan on working on the system, as well as the number of cores you would need.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_1.jpg" width=800 height=1000 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_1.jpg" width=500 height=700 />
 <p>To set up the datasette module, log onto Rivanna. This only needs to be done once per user (computing ID). The steps to log onto Rivanna are in chapter XX. Select the JupyterLab interactive app. Some options will appear. Leave the options as below, changing the allocation name to the project space of interest.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_2.jpg" width=800 height=1000 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_2.jpg" width=500 height= 600 />
 <p>Launch the app, and create a new terminal session.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_3.jpg" width=800 height=1000 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_3.jpg" width=500 height=700 />
 <p>Next, type “cd” into the terminal. This makes sure you are working in your home directory. Next, type “pip install –user datasette”. This will install the datasette module.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_4.jpg" width=800 height=1000 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_4.jpg" width=300 height=350 />
 <p>The next steps are steps to access the datasette module. This is steps 3 onwards in the overview above. To access the datasette module, go back to “My Interactive Sessions” on Rivanna. Open a “Desktop” session, leaving changing the allocations to the number of hours of interest. With the Desktop application, you can slide the “Image Quality” bar to “high” to make the desktop less pixelated.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_5.jpg" width=800 height=1000 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_5.jpg" width=500 height=700 />
 <p>Launch the Desktop application. To copy and paste into this environment, you have to use the side-menu clipboard. This is highlighted in the image below.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_6.jpg" width=800 height=1000 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_6.jpg" width=500 height=700 />
 <p>Open a terminal window in the Desktop application. Copy and paste this command into the desktop: ~/.local/bin/datasette “/project/path-to-database/database-name.db”. Make sure you are using double quotes for the path to where the database exists. Also, make sure to include the initial forward slash, and the project to indicate the database exists in a project space on Rivanna. Paste on the desktop terminal, and hit enter.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_7.jpg" width=800 height=1000 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_7.jpg" width=500 height=700 />
 <p>A link to a server containing the dashboard should appear. Copy and paste this link into firefox on the Desktop application.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_8.jpg" width=800 height=1000 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_8.jpg" width=500 height=700 />
 <p>Click on the “item_specs” table. This is the table containing the data that is collected everyday at midnight. We can use the drop down menu that appears to filter the table to your liking. You can also leave the drop down menu blank to collect all the data. In this example, we filter for items of Price greater than $1000.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_9.jpg" width=800 height=1000 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_9.jpg" width=500 height=700 />
 <p>To download the data as a CSV file, right click on the “CSV” link, and click “Save Link As”. This will result in a window where you can choose where to download the dataset of interest. Select where you would like to save the CSV file, rename the file to your liking, and click save. In this example, we save it to the Rivanna Desktop.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_10.jpg" width=800 height=1000 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_10.jpg" width=500 height=700 />
 <p>To shut down Desktop, simply close out of Firefox. In the terminal window that is open, hit control-C on your keyboard. This should result in the server shutting down.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_11.jpg" width=800 height=1000 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_11.jpg" width=500 height=700 />
 <p>The data now lives in your home directory on Rivanna in CSV format. To access this data, go back to the Jupyter application, select “HOME” as your work directory, and start a session.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_12.jpg" width=800 height=1000 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_12.jpg" width=500 height=700 />
 <p>Once the session begins, you should be able to find the data in the file you chose earlier in the Desktop application. In this example, it exists in the “Desktop folder”. You can right click on the CSV file to download it onto your local computer.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_13.jpg" width=800 height=1000 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_13.jpg" width=500 height=700 />
 <p>You now have the most up to date version of the dataset of your liking! You can use this CSV file for analysis in R, Python, STATA or other software of your choice. The data will keep being collected, and new data can be accessed with the same steps.</p>
 </div>
-</div>
 <div class="section" id="final-remarks">
-<h1><strong>Final Remarks</strong><a class="headerlink" href="#final-remarks" title="Permalink to this headline">¶</a></h1>
+<h2><strong>Final Remarks</strong><a class="headerlink" href="#final-remarks" title="Permalink to this headline">¶</a></h2>
 <p>This documentation provides a detailed and comprehensive overview of the implementation of a data pipeline for social research. This data pipeline makes a connection to eBay’s developer’s program, connects to the appropriate APIs, collects data, and stores data. This pipeline also provides a dashboard for accessing and saving the data for future works. When editing the data pipeline, the “Navigating the Code” chapter will be useful in understanding the specific implementation of Python code. General Python errors that appear can be researched on Google or StakeOverflow. Connection errors to eBay’s developer program can be researched on eBay’s documentation. The implementation of this data pipeline will allow for social search to collect up-to-date data on categories of interest across eBay, and can be edited for more specific use-cases.</p>
+</div>
 </div>
 
     <script type="text/x-thebe-config">

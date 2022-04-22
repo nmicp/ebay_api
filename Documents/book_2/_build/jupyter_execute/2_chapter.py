@@ -10,7 +10,7 @@
 # eBay has different APIs to access various listings features. These features can be understood by the characteristics of a given item posting such as the given item or product, description, price, buying, delivery options, etc. eBay stores the information of the various post characteristics in different APIs in their documentation. The documentation on eBay’s developer’s program is fairly comprehensive, but we will condense that information to make it relevant to this project. Please note that the documentation is vast and changes on occasion, so it is best to cross reference information when something does not seem right. 
 # 
 
-# ## **Understanding the different types of eBay's APIs** 
+# ### **Understanding the different types of eBay's APIs** 
 # 
 # In order to account for the variety of users that use eBay’s developer’s program, eBay has many APIs that access different aspects of listings and marketplaces. By using an API, eBay can keep track of who is using their data and for what purposes. When we use an API, we are keeping in accordance with their data governance while having a streamlined process of accessing data. While there is room to explore eBay’s different APIs further, to find the variables of interest for our project, we used two APIs: the Shopping API and the Finding API. We used two APIs, as different variables of interest could be extracted from the Finding and Shopping API. First, we used the Finding API to filter across categories of interest in a specific timeframe. Next, we will use the Shopping API to go through the items extracted from the Finding API to find other variables of interest for specific listings. The details of the implementation for our specific use-case are in the following subsections.  
 # 
@@ -84,7 +84,7 @@
 # -	<a href="https://pages.ebay.com/sellerinformation/news/categorychanges.html "> eBay’s description and updates of categories </a>
 # 
 
-# ## **Data Description:**
+# ### **Data Description**
 # 
 # The following table are features of interest extracted from the Finding and Shopping API. The table contains the feature name, the data type, and a brief description. The data pipeline that we define in this documentation gathers these features. Changes can be made to the architecture to gather more information. 
 # 
