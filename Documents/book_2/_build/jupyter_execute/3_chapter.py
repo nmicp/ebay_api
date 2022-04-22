@@ -26,15 +26,9 @@
 # 
 # *figure 3.* The automated data collection process. This flowchart represents the overall automated data collection process that we built. The inner box indicates a comprehensive process to collect for each category. Then, the data is concatenated and the collection process is automated each 24 hours. 
 # 
-# <img src="fig7.jpg" width=500 height=600 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig7.jpg" width=500 height=700 />
 # 
 # 
-
-# In[ ]:
-
-
-
-
 
 # ## **Flask App** <a class="anchor" id="section_3_2_1"></a>
 # 
@@ -641,7 +635,7 @@
 # <code>#SBATCH --mail-user= <user "email address"></code>
 # This specifies the user’s associated email address to be notified when a failed event type occurs.
 # 
-# <img src="fig8.jpg" width=800 height=1000 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig8.jpg" width=800 height=1000 />
 #     
 # 
 #     
@@ -693,64 +687,64 @@
 # 
 # There, click on the link that says “Launch Open OnDemand”. Log into this system with your UVA ID and associated password. Once on Rivanna, click on “My Interactive Session” on the top menu bar. Then, we can select which Interactive App you would like to use. For this project, we mainly use JupyterLab — a coding interface typically used for Python. We will also use the Desktop application to access the high-level dashboard we create. When using Rivanna, you have the option of customizing the number of hours you plan on working on the system, as well as the number of cores you would need. 
 # 
-# <img src="Datasette_1.jpg" width=800 height=1000 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_1.jpg" width=800 height=1000 />
 # 
 # 
 # To set up the datasette module, log onto Rivanna. This only needs to be done once per user (computing ID). The steps to log onto Rivanna are in chapter XX. Select the JupyterLab interactive app. Some options will appear. Leave the options as below, changing the allocation name to the project space of interest. 
 # 
-# <img src="Datasette_2.jpg" width=800 height=1000 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_2.jpg" width=800 height=1000 />
 # 
 # Launch the app, and create a new terminal session. 
 # 
-# <img src="Datasette_3.jpg" width=800 height=1000 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_3.jpg" width=800 height=1000 />
 # 
 # Next, type “cd” into the terminal. This makes sure you are working in your home directory. Next, type “pip install --user datasette”. This will install the datasette module. 
 # 
 # 
-# <img src="Datasette_4.jpg" width=800 height=1000 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_4.jpg" width=800 height=1000 />
 # 
 # 
 # The next steps are steps to access the datasette module. This is steps 3 onwards in the overview above. To access the datasette module, go back to “My Interactive Sessions” on Rivanna. Open a “Desktop” session, leaving changing the allocations to the number of hours of interest. With the Desktop application, you can slide the “Image Quality” bar to “high” to make the desktop less pixelated. 
 # 
-# <img src="Datasette_5.jpg" width=800 height=1000 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_5.jpg" width=800 height=1000 />
 # 
 # 
 # Launch the Desktop application. To copy and paste into this environment, you have to use the side-menu clipboard. This is highlighted in the image below.
 # 
 # 
-# <img src="Datasette_6.jpg" width=800 height=1000 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_6.jpg" width=800 height=1000 />
 # 
 # 
 # Open a terminal window in the Desktop application. Copy and paste this command into the desktop: ~/.local/bin/datasette “/project/path-to-database/database-name.db”. Make sure you are using double quotes for the path to where the database exists. Also, make sure to include the initial forward slash, and the project to indicate the database exists in a project space on Rivanna. Paste on the desktop terminal, and hit enter. 
 # 
-# <img src="Datasette_7.jpg" width=800 height=1000 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_7.jpg" width=800 height=1000 />
 # 
 # A link to a server containing the dashboard should appear. Copy and paste this link into firefox on the Desktop application. 
 # 
-# <img src="Datasette_8.jpg" width=800 height=1000 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_8.jpg" width=800 height=1000 />
 # 
 # Click on the “item_specs” table. This is the table containing the data that is collected everyday at midnight. We can use the drop down menu that appears to filter the table to your liking. You can also leave the drop down menu blank to collect all the data. In this example, we filter for items of Price greater than $1000. 
 # 
-# <img src="Datasette_9.jpg" width=800 height=1000 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_9.jpg" width=800 height=1000 />
 # 
 # 
 # To download the data as a CSV file, right click on the “CSV” link, and click “Save Link As”. This will result in a window where you can choose where to download the dataset of interest. Select where you would like to save the CSV file, rename the file to your liking, and click save. In this example, we save it to the Rivanna Desktop. 
 # 
-# <img src="Datasette_10.jpg" width=800 height=1000 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_10.jpg" width=800 height=1000 />
 # 
 # To shut down Desktop, simply close out of Firefox. In the terminal window that is open, hit control-C on your keyboard. This should result in the server shutting down. 
 # 
 # 
-# <img src="Datasette_11.jpg" width=800 height=1000 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_11.jpg" width=800 height=1000 />
 # 
 # 
 # The data now lives in your home directory on Rivanna in CSV format. To access this data, go back to the Jupyter application, select “HOME” as your work directory, and start a session. 
 # 
-# <img src="Datasette_12.jpg" width=800 height=1000 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_12.jpg" width=800 height=1000 />
 # 
 # Once the session begins, you should be able to find the data in the file you chose earlier in the Desktop application. In this example, it exists in the “Desktop folder”. You can right click on the CSV file to download it onto your local computer. 
 # 
-# <img src="Datasette_13.jpg" width=800 height=1000 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_13.jpg" width=800 height=1000 />
 # 
 # You now have the most up to date version of the dataset of your liking! You can use this CSV file for analysis in R, Python, STATA or other software of your choice. The data will keep being collected, and new data can be accessed with the same steps. 
 
