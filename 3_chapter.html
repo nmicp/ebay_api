@@ -952,7 +952,7 @@ The -t parameter sets the time limit for which the job will stop running. For th
 This parameter notifies the associated mail-user by email when a failed event type occurs.</p>
 <p><code>#SBATCH –mail-user= &lt;user “email address”&gt;</code>
 This specifies the user’s associated email address to be notified when a failed event type occurs.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig8.jpg" width=300 height=480 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig8.jpg" width=500 height=480 />
 <p>Once the parameters of the slurm file are set, the next step is to set up the job to run. To set this up, navigate to the folder/directory that contains the slurm script. This can be accomplished by opening a terminal (via file &gt; new &gt; terminal on Rivanna) and checking to see if the <code>pwd</code> (present working directory) matches the location of interest. To navigate to the correct directory use type in cd followed by the location of interest. Once you have confirmed that you are in the correct directory, type the function “sbatch slurm_file_name.slurm”. Hit enter, and if successful, the following message should appear “submitted batch job [number]”.</p>
 <p>There are several terminal commands that can check the status of a slurm job. These commands, and their exact syntax, are listed below:</p>
 <p><code>scontrol show [job number]</code></p>
@@ -993,7 +993,7 @@ a.	Make sure you include the first slash and double quotes!</p></li>
 <p>There, click on the link that says “Launch Open OnDemand”. Log into this system with your UVA ID and associated password. Once on Rivanna, click on “My Interactive Session” on the top menu bar. Then, we can select which Interactive App you would like to use. For this project, we mainly use JupyterLab — a coding interface typically used for Python. We will also use the Desktop application to access the high-level dashboard we create. When using Rivanna, you have the option of customizing the number of hours you plan on working on the system, as well as the number of cores you would need.</p>
 <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_1.jpg" width=500 height=300 />
 <p>To set up the datasette module, log onto Rivanna. This only needs to be done once per user (computing ID). The steps to log onto Rivanna are in chapter XX. Select the JupyterLab interactive app. Some options will appear. Leave the options as below, changing the allocation name to the project space of interest.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_2.jpg" width=500 height= 300 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_2.jpg" width=400 height= 300 />
 <p>Launch the app, and create a new terminal session.</p>
 <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_3.jpg" width=500 height=300 />
 <p>Next, type “cd” into the terminal. This makes sure you are working in your home directory. Next, type “pip install –user datasette”. This will install the datasette module.</p>
@@ -1013,7 +1013,7 @@ a.	Make sure you include the first slash and double quotes!</p></li>
 <p>To shut down Desktop, simply close out of Firefox. In the terminal window that is open, hit control-C on your keyboard. This should result in the server shutting down.</p>
 <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_11.jpg" width=500 height=300 />
 <p>The data now lives in your home directory on Rivanna in CSV format. To access this data, go back to the Jupyter application, select “HOME” as your work directory, and start a session.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_12.jpg" width=500 height=300 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_12.jpg" width=400 height=300 />
 <p>Once the session begins, you should be able to find the data in the file you chose earlier in the Desktop application. In this example, it exists in the “Desktop folder”. You can right click on the CSV file to download it onto your local computer.</p>
 <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_13.jpg" width=500 height=300 />
 <p>You now have the most up to date version of the dataset of your liking! You can use this CSV file for analysis in R, Python, STATA or other software of your choice. The data will keep being collected, and new data can be accessed with the same steps.</p>
