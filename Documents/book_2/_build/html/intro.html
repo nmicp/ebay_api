@@ -160,9 +160,9 @@ const thebe_selector_output = ".output, .cell_output"
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/intro.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
                 onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -195,6 +195,23 @@ const thebe_selector_output = ".output, .cell_output"
             class="fas fa-expand"></i></button></a>
 
             <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/intro.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
 
         </div>
 
@@ -263,15 +280,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p><strong>Chapter 3: Getting Data from eBay</strong></p>
 <p>Finally, the third chapter focuses on the specific implementation of the data pipeline architecture in python. This chapter includes a step-by-step guide on how to obtain this data from a recursive script, and also a tutorial to run these activities from the Rivanna UVA platform that facilitates the data storage systems. The result of this data pipeline framework is a replicable blueprint for interacting with an online marketplace’s API environment. This project will act as a precursor to begin research regarding the global trade of illicit cultural property through subsequent network and spatial analysis.</p>
 <p>The updated version of this manual is 2022-04-22.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="1_chapter.html"><strong>Description of eBay’s API Data Pipeline</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="2_chapter.html"><strong>Getting Started with eBay’s APIs</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_chapter.html"><strong>Getting Data from eBay</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_chapter.html#navigating-through-the-code"><strong>Navigating through the Code</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="3_chapter.html#querying-the-data-with-datasette-io"><strong>Querying the Data with Datasette.io</strong></a></li>
-</ul>
 </div>
+<div class="toctree-wrapper compound">
 </div>
 </div>
 
