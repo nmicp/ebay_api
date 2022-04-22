@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>eBay’s API Data Pipeline &#8212; eBay&#39;s API Data Pipeline</title>
+    <title>Description of eBay’s API Data Pipeline &#8212; eBay&#39;s API Data Pipeline</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Getting Started with eBay’s APIs" href="2_chapter.html" />
-    <link rel="prev" title="Notebooks with MyST Markdown" href="markdown-notebooks.html" />
+    <link rel="prev" title="Welcome to eBay’s API Data Pipeline" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -94,30 +94,15 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Welcome to your Jupyter Book
+   Welcome to eBay’s API Data Pipeline
   </a>
  </li>
 </ul>
 <ul class="current nav bd-sidenav">
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown.html">
-   Markdown Files
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="notebooks.html">
-   Content with notebooks
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="markdown-notebooks.html">
-   Notebooks with MyST Markdown
-  </a>
- </li>
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    <strong>
-    eBay’s API Data Pipeline
+    Description of eBay’s API Data Pipeline
    </strong>
   </a>
  </li>
@@ -240,29 +225,6 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preliminaries">
-   <strong>
-    Preliminaries
-   </strong>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-is-this-manual-about">
-     <strong>
-      What Is this Manual About?
-     </strong>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#description-of-ebay-s-api-data-pipeline">
-   <strong>
-    Description of eBay’s API Data Pipeline
-   </strong>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#key-concepts">
    <strong>
     Key Concepts
@@ -279,7 +241,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>eBay’s API Data Pipeline</h1>
+                <h1>Description of eBay’s API Data Pipeline</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -289,29 +251,6 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preliminaries">
-   <strong>
-    Preliminaries
-   </strong>
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#what-is-this-manual-about">
-     <strong>
-      What Is this Manual About?
-     </strong>
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#description-of-ebay-s-api-data-pipeline">
-   <strong>
-    Description of eBay’s API Data Pipeline
-   </strong>
-  </a>
- </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#key-concepts">
    <strong>
@@ -328,26 +267,8 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="ebays-api-data-pipeline">
-<h1><strong>eBay’s API Data Pipeline</strong><a class="headerlink" href="#ebays-api-data-pipeline" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="preliminaries">
-<h2><strong>Preliminaries</strong><a class="headerlink" href="#preliminaries" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="what-is-this-manual-about">
-<h3><strong>What Is this Manual About?</strong><a class="headerlink" href="#what-is-this-manual-about" title="Permalink to this headline">¶</a></h3>
-<p>This manual aims to provide technical guidance and documentation to the process of building an automated data pipeline from eBay’s developer’s program for research purposes. Specific technical documentation will walk through the process of accessing eBay’s Application Programming Interface (API), and documenting the code that collects the data. This is a product of the capstone project, “Network Mobility of Illicit Cultural Property” developed by the UVA Data Science School and the <a href="https://curialab.org/">Cultural Resilience Informatics and Analysis (CURIA) Lab</a>.</p>
-<p>This research project stems from research of online marketplace as platforms for illicit trade. The scale of global art crime has been difficult to quantify due to the vast number of transactions and varying methods of trade. The illicit antiquities trade has moved away from physical specialist shops in favor of online buying and selling platforms such as eBay. These online platforms characterized by transactions and vendors offering heterogeneous goods have not been systematically studied due to its data-intensive nature. This project designs a robust data pipeline that collects, processes, and stores data to quantify and analyze the network mobility of illicit cultural property. The data pipeline consists of a template for accessing eBay’s API, understanding API documentation, and collecting necessary features for future analysis. The metadata for building and maintaining the data pipeline is recorded in an in-depth guide to account for data collection bias.</p>
-<p>In this documentation we organize the use-case of this data pipeline in the following manner.</p>
-<p><strong>Chapter 1: Preliminaries</strong></p>
-<p>This documentation begins by explaining the basic technological concepts needed to build an API. This chapter will also include a dictionary of the eBay categories used to extract the necessary data from the listings in the antiques categories. The chapter includes a data modeling section that explains the SQL schema of building a relational database.</p>
-<p><strong>Chapter 2: Getting Started with eBay’s APIs</strong></p>
-<p>The second chapter provides a theoretical framework of picking these APIs, data description, and a section of legal and ethical challenges will also be included in this chapter. This is a user-friendly and comprehensive description of eBay’s API documentation, focused on the Shopping and the Finding APIs.</p>
-<p><strong>Chapter 3: Getting Data from eBay</strong></p>
-<p>Finally, the third chapter focuses on the specific implementation of the data pipeline architecture in python. This chapter includes a step-by-step guide on how to obtain this data from a recursive script, and also a tutorial to run these activities from the Rivanna UVA platform that facilitates the data storage systems. The result of this data pipeline framework is a replicable blueprint for interacting with an online marketplace’s API environment. This project will act as a precursor to begin research regarding the global trade of illicit cultural property through subsequent network and spatial analysis.</p>
-<p>The updated version of this manual is 2022-04-13.</p>
-</div>
-</div>
-<div class="section" id="description-of-ebay-s-api-data-pipeline">
-<h2><strong>Description of eBay’s API Data Pipeline</strong><a class="headerlink" href="#description-of-ebay-s-api-data-pipeline" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="description-of-ebay-s-api-data-pipeline">
+<h1><strong>Description of eBay’s API Data Pipeline</strong><a class="headerlink" href="#description-of-ebay-s-api-data-pipeline" title="Permalink to this headline">¶</a></h1>
 <p><strong>General Workflow of eBay’s Data Pipeline</strong></p>
 <p>The following flowcharts should help navigate the process of building the data pipeline. Specifics will not be highlighted in the roadmap, but will reference future chapters that dive into each section. Definitions of technical terms in this diagram can be found in chapter 1.</p>
 <p><em>Figure 1</em> highlights the general structure of how we built out this eBay data pipeline for research. The first step of getting data from eBay’s developer’s program was to get API keys. The steps of collecting these keys are described in the Understanding API chapter while the implementation of a Flask app is in chapter 3. This connection will only need to be completed once per project.</p>
@@ -355,14 +276,13 @@ const thebe_selector_output = ".output, .cell_output"
 <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig1.jpg" width=200 height=500 />
 <p>This section provides a high-level overview of each of the critical stages in the data collection and processing pipeline. More information about each step will be discussed in the following chapters.</p>
 <p><strong>Diagram A</strong> outlines the necessary steps to make an initial connection to eBay’s API system and gain access to their data. First, interested parties are required to create a developer’s program and apply for application access keys. They are then required to construct a RESTful API to communicate with eBay’s system and receive developer tokens. These tokens are unique and should be stored in a secret .env file located in the same directory as the other project scripts. More information regarding getting access to eBay’s API can be found in the beginning of chapter 3.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig2.jpg" width=400 height=300 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig2.jpg" width=400 height=280 />
 <p><strong>Diagram B</strong> describes the need of having a basic understanding of the functions of eBay’s API and documentation. In general, once a successful connection to eBay has been established, users will need to read through and understand eBay’s documentation and syntax to interface with APIs of interest. For our use case, the Finding and Shopping APIs to get data for our features of interest. More specific information about the language of the eBay developer’s program can be found in chapter 2.</p>
 <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig3.jpg" width=300 height=380 />
 <p><strong>Diagram C</strong> provides an overview on the method of how data is extracted and cleaned. The extracted raw data is converted to a tabular format, and other cleaning processes are performed using a series of nested loops. Details on the code that implements this can be found in chapter 3. This section describes the recursive nature that is completed automatically every day when script runs to collect data from eBay.</p>
 <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig4.jpg" width=300 height=380 />
 <p><strong>Diagram D</strong> provides a framework for data storage and retrieval. Once the data has been successfully processed into a clean table, we store it for later use. A permanent storage space comes in the form of tables in a dedicated SQL database. If the table does not exist, it must be created. However, if the table already exists then the processed data is simply appended to it. We create a table once, and keep updating the table with the newest data we collect each day. This recursive nature of storing data can be found in chapter 3.</p>
 <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig5.jpg" width=300 height=380 />
-</div>
 <div class="section" id="key-concepts">
 <h2><strong>Key Concepts</strong><a class="headerlink" href="#key-concepts" title="Permalink to this headline">¶</a></h2>
 <p>This chapter aims to explain key concepts essential to the automated data collection process through eBay’s API.</p>
@@ -489,11 +409,11 @@ const thebe_selector_output = ".output, .cell_output"
             
                 <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="markdown-notebooks.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Notebooks with MyST Markdown</p>
+            <p class="prev-next-title">Welcome to eBay’s API Data Pipeline</p>
         </div>
     </a>
     <a class='right-next' id="next-link" href="2_chapter.html" title="next page">
