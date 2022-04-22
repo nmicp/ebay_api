@@ -687,7 +687,7 @@
 # 
 # There, click on the link that says “Launch Open OnDemand”. Log into this system with your UVA ID and associated password. Once on Rivanna, click on “My Interactive Session” on the top menu bar. Then, we can select which Interactive App you would like to use. For this project, we mainly use JupyterLab — a coding interface typically used for Python. We will also use the Desktop application to access the high-level dashboard we create. When using Rivanna, you have the option of customizing the number of hours you plan on working on the system, as well as the number of cores you would need. 
 # 
-# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_1.jpg" width=550 height=500 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_1.jpg" width=500 height=300 />
 # 
 # 
 # To set up the datasette module, log onto Rivanna. This only needs to be done once per user (computing ID). The steps to log onto Rivanna are in chapter XX. Select the JupyterLab interactive app. Some options will appear. Leave the options as below, changing the allocation name to the project space of interest. 
