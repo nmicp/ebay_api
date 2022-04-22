@@ -635,7 +635,7 @@
 # <code>#SBATCH --mail-user= <user "email address"></code>
 # This specifies the user’s associated email address to be notified when a failed event type occurs.
 # 
-# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig8.jpg" width=500 height=480 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig8.jpg" width=500 height=550 />
 #     
 # 
 #     
@@ -692,7 +692,7 @@
 # 
 # To set up the datasette module, log onto Rivanna. This only needs to be done once per user (computing ID). The steps to log onto Rivanna are in chapter XX. Select the JupyterLab interactive app. Some options will appear. Leave the options as below, changing the allocation name to the project space of interest. 
 # 
-# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_2.jpg" width=400 height= 300 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_2.jpg" width=400 height= 400 />
 # 
 # Launch the app, and create a new terminal session. 
 # 
@@ -740,7 +740,7 @@
 # 
 # The data now lives in your home directory on Rivanna in CSV format. To access this data, go back to the Jupyter application, select “HOME” as your work directory, and start a session. 
 # 
-# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_12.jpg" width=400 height=300 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/Datasette_12.jpg" width=400 height=400 />
 # 
 # Once the session begins, you should be able to find the data in the file you chose earlier in the Desktop application. In this example, it exists in the “Desktop folder”. You can right click on the CSV file to download it onto your local computer. 
 # 
