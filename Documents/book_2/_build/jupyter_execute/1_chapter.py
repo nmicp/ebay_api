@@ -40,7 +40,7 @@
 # Next, we build the data pipeline in python script. This is highlighted in steps B through D - see the below diagrams. This recursive data collection method runs every 24 hours to collect the most up-to-date data from eBay categories of interest. This general procedure ranges from collecting the access keys to running an automated script. This algorithm consists of three main activities in an automated fashion: connecting to the desired API (Shopping and Finding API), mining the data, and saving the information in a SQL database. Specific background knowledge on these steps can be found in chapter “Getting Started with eBay’s API”. Implementation of this framework in python can be found in “Getting Data from eBay”. The last step of the roadmap — analysis — is open for social research. In the previous steps, we set-up a pipeline that cleans and stores data that is accessible through a csv file. In the analysis section, this csv file can be downloaded to be used in future analysis and research. Information on how to access the data for analysis can be found in “Accessing Data with Datasette”. 
 # 
 # 
-# <img src="fig1.jpg" width=200 height=350 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig1.jpg" width=200 height=350 />
 # 
 # This section provides a high-level overview of each of the critical stages in the data collection and processing pipeline. More information about each step will be discussed in the following chapters. 
 # 
