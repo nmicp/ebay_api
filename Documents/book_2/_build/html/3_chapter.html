@@ -101,7 +101,7 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="1_chapter.html">
    <strong>
-    Description of eBay’s API Data Pipeline
+    Preliminaries
    </strong>
   </a>
  </li>
@@ -937,7 +937,7 @@ The -t parameter sets the time limit for which the job will stop running. For th
 This parameter notifies the associated mail-user by email when a failed event type occurs.</p>
 <p><code>#SBATCH –mail-user= &lt;user “email address”&gt;</code>
 This specifies the user’s associated email address to be notified when a failed event type occurs.</p>
-<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig8.jpg" width=400 height=500 />
+<img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig8.jpg" width=800 height=800 />
 <p>Once the parameters of the slurm file are set, the next step is to set up the job to run. To set this up, navigate to the folder/directory that contains the slurm script. This can be accomplished by opening a terminal (via file &gt; new &gt; terminal on Rivanna) and checking to see if the <code>pwd</code> (present working directory) matches the location of interest. To navigate to the correct directory use type in cd followed by the location of interest. Once you have confirmed that you are in the correct directory, type the function “sbatch slurm_file_name.slurm”. Hit enter, and if successful, the following message should appear “submitted batch job [number]”.</p>
 <p>There are several terminal commands that can check the status of a slurm job. These commands, and their exact syntax, are listed below:</p>
 <p><code>scontrol show [job number]</code></p>

@@ -3,7 +3,7 @@
 
 # # Welcome to eBay’s API Data Pipeline
 # 
-# ## **What Is this Manual About?** 
+# ### **What Is this Manual About?** 
 # 
 # This manual aims to provide technical guidance and documentation to the process of building an automated data pipeline from eBay’s developer’s program for research purposes. Specific technical documentation will walk through the process of accessing eBay's Application Programming Interface (API), and documenting the code that collects the data. This is a product of the capstone project, "Network Mobility of Illicit Cultural Property" developed by the UVA Data Science School and the <a href="https://curialab.org/">Cultural Resilience Informatics and Analysis (CURIA) Lab</a>.
 #  
@@ -25,9 +25,3 @@
 # 
 # The updated version of this manual is 2022-04-22. 
 # 
-
-# In[ ]:
-
-
-
-

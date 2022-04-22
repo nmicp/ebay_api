@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## **Description of eBay's API Data Pipeline** 
+# ## **Preliminaries**
 # 
-# **General Workflow of eBay’s Data Pipeline**
+# ### **Description of eBay's API Data Pipeline** 
+# 
+# #### **General Workflow of eBay’s Data Pipeline**
 # 
 # 
 # The following flowcharts should help navigate the process of building the data pipeline. Specifics will not be highlighted in the roadmap, but will reference future chapters that dive into each section. Definitions of technical terms in this diagram can be found in chapter 1.

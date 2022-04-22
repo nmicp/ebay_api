@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Description of eBay’s API Data Pipeline &#8212; eBay&#39;s API Data Pipeline</title>
+    <title>Preliminaries &#8212; eBay&#39;s API Data Pipeline</title>
     
   <link href="_static/css/theme.css" rel="stylesheet">
   <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -102,7 +102,7 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
    <strong>
-    Description of eBay’s API Data Pipeline
+    Preliminaries
    </strong>
   </a>
  </li>
@@ -225,6 +225,22 @@ const thebe_selector_output = ".output, .cell_output"
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#description-of-ebay-s-api-data-pipeline">
+   <strong>
+    Description of eBay’s API Data Pipeline
+   </strong>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-workflow-of-ebays-data-pipeline">
+     <strong>
+      General Workflow of eBay’s Data Pipeline
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#key-concepts">
    <strong>
     Key Concepts
@@ -241,7 +257,7 @@ const thebe_selector_output = ".output, .cell_output"
         <div class="col-12 col-md-9 pl-md-3 pr-md-0">
             <!-- Table of contents that is only displayed when printing the page -->
             <div id="jb-print-docs-body" class="onlyprint">
-                <h1>Description of eBay’s API Data Pipeline</h1>
+                <h1>Preliminaries</h1>
                 <!-- Table of contents -->
                 <div id="print-main-content">
                     <div id="jb-print-toc">
@@ -251,6 +267,22 @@ const thebe_selector_output = ".output, .cell_output"
                         </div>
                         <nav aria-label="Page">
                             <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#description-of-ebay-s-api-data-pipeline">
+   <strong>
+    Description of eBay’s API Data Pipeline
+   </strong>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#general-workflow-of-ebays-data-pipeline">
+     <strong>
+      General Workflow of eBay’s Data Pipeline
+     </strong>
+    </a>
+   </li>
+  </ul>
+ </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#key-concepts">
    <strong>
@@ -267,9 +299,12 @@ const thebe_selector_output = ".output, .cell_output"
             
               <div>
                 
-  <div class="section" id="description-of-ebay-s-api-data-pipeline">
-<h1><strong>Description of eBay’s API Data Pipeline</strong><a class="headerlink" href="#description-of-ebay-s-api-data-pipeline" title="Permalink to this headline">¶</a></h1>
-<p><strong>General Workflow of eBay’s Data Pipeline</strong></p>
+  <div class="section" id="preliminaries">
+<h1><strong>Preliminaries</strong><a class="headerlink" href="#preliminaries" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="description-of-ebay-s-api-data-pipeline">
+<h2><strong>Description of eBay’s API Data Pipeline</strong><a class="headerlink" href="#description-of-ebay-s-api-data-pipeline" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="general-workflow-of-ebays-data-pipeline">
+<h3><strong>General Workflow of eBay’s Data Pipeline</strong><a class="headerlink" href="#general-workflow-of-ebays-data-pipeline" title="Permalink to this headline">¶</a></h3>
 <p>The following flowcharts should help navigate the process of building the data pipeline. Specifics will not be highlighted in the roadmap, but will reference future chapters that dive into each section. Definitions of technical terms in this diagram can be found in chapter 1.</p>
 <p><em>Figure 1</em> highlights the general structure of how we built out this eBay data pipeline for research. The first step of getting data from eBay’s developer’s program was to get API keys. The steps of collecting these keys are described in the Understanding API chapter while the implementation of a Flask app is in chapter 3. This connection will only need to be completed once per project.</p>
 <p>Next, we build the data pipeline in python script. This is highlighted in steps B through D - see the below diagrams. This recursive data collection method runs every 24 hours to collect the most up-to-date data from eBay categories of interest. This general procedure ranges from collecting the access keys to running an automated script. This algorithm consists of three main activities in an automated fashion: connecting to the desired API (Shopping and Finding API), mining the data, and saving the information in a SQL database. Specific background knowledge on these steps can be found in chapter “Getting Started with eBay’s API”. Implementation of this framework in python can be found in “Getting Data from eBay”. The last step of the roadmap — analysis — is open for social research. In the previous steps, we set-up a pipeline that cleans and stores data that is accessible through a csv file. In the analysis section, this csv file can be downloaded to be used in future analysis and research. Information on how to access the data for analysis can be found in “Accessing Data with Datasette”.</p>
@@ -283,6 +318,8 @@ const thebe_selector_output = ".output, .cell_output"
 <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig4.jpg" width=300 height=380 />
 <p><strong>Diagram D</strong> provides a framework for data storage and retrieval. Once the data has been successfully processed into a clean table, we store it for later use. A permanent storage space comes in the form of tables in a dedicated SQL database. If the table does not exist, it must be created. However, if the table already exists then the processed data is simply appended to it. We create a table once, and keep updating the table with the newest data we collect each day. This recursive nature of storing data can be found in chapter 3.</p>
 <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig5.jpg" width=300 height=380 />
+</div>
+</div>
 <div class="section" id="key-concepts">
 <h2><strong>Key Concepts</strong><a class="headerlink" href="#key-concepts" title="Permalink to this headline">¶</a></h2>
 <p>This chapter aims to explain key concepts essential to the automated data collection process through eBay’s API.</p>

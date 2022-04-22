@@ -635,7 +635,7 @@
 # <code>#SBATCH --mail-user= <user "email address"></code>
 # This specifies the user’s associated email address to be notified when a failed event type occurs.
 # 
-# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig8.jpg" width=400 height=500 />
+# <img src="https://raw.githubusercontent.com/nmicp/ebay_api/master/Documents/book_2/fig8.jpg" width=800 height=800 />
 #     
 # 
 #     
