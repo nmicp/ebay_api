@@ -127,6 +127,27 @@ const thebe_selector_output = ".output, .cell_output"
    </strong>
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="5_appendix.html">
+   <strong>
+    Appendix B
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="6_appendix.html">
+   <strong>
+    Appendix C
+   </strong>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="7_authors.html">
+   <strong>
+    About the Authors
+   </strong>
+  </a>
+ </li>
 </ul>
 
     </div>
@@ -966,14 +987,16 @@ This specifies the user’s associated email address to be notified when a faile
 <p>In order to make our database more intuitive and accessible, we use the “datasette” module to create a high-level dashboard. This dashboard contains the data in a table format. It also presents drop down lists in order to select and subset data of interest. The datasette module also allows you to download the data in a CSV file or a JSON file. In this section, we discuss setting up this datasette module on Rivanna and how to access this module each time you want to download data of interest.</p>
 <p>Before accessing the drop-down menu and high-level dashboard, you would need to import the datasette module. This module is open source, and can be imported on Rivanna. In the overview below, steps 1-2 walk through installing this module. Steps 3-8 are for accessing and parsing through the data.</p>
 <p><em><strong>High level <a class="reference external" href="http://datasette.io">datasette.io</a> procedure</strong></em></p>
-<ol class="simple">
+<ol>
 <li><p>Log onto Rivanna</p></li>
-<li><p>If first time importing module start here, if not skip to step 3:
-a.	Start a session on Jupyter session on project space
-b.	Open a terminal
-c.	Make sure you are in your home directory (cd)
-d.	Type in “pip install –user datasette”
-i.	Should be installed in home directory</p></li>
+<li><p>If first time importing module start here:
+A. Start a session on Jupyter session on project space
+B. Open a terminal
+C. Make sure you are in your home directory (cd)
+D. Type in “pip install –user datasette”
+E. Should be installed in home directory</p>
+<p>if not skip to step 3</p>
+</li>
 <li><p>Start a Desktop session on Rivanna</p></li>
 <li><p>Open a terminal window</p></li>
 <li><p>Type in this: ~/.local/bin/datasette “/path-to-database/database-name.db”
@@ -1013,7 +1036,7 @@ a.	Make sure you include the first slash and double quotes!</p></li>
 </div>
 <div class="section" id="final-remarks">
 <h2><strong>Final Remarks</strong><a class="headerlink" href="#final-remarks" title="Permalink to this headline">¶</a></h2>
-<p>This documentation provides a detailed and comprehensive overview of the implementation of a data pipeline for social research. This data pipeline makes a connection to eBay’s developer’s program, connects to the appropriate APIs, collects data, and stores data. This pipeline also provides a dashboard for accessing and saving the data for future works. When editing the data pipeline, the “Navigating the Code” chapter will be useful in understanding the specific implementation of Python code. General Python errors that appear can be researched on Google or StakeOverflow. Connection errors to eBay’s developer program can be researched on eBay’s documentation. The implementation of this data pipeline will allow for social search to collect up-to-date data on categories of interest across eBay, and can be edited for more specific use-cases.</p>
+<p>This documentation provides a detailed and comprehensive overview of the implementation of a data pipeline for social research. This data pipeline makes a connection to eBay’s developer’s program, connects to the appropriate APIs, collects data, and stores data. This pipeline also provides a dashboard for accessing and saving the data for future works. When editing the data pipeline, the “Navigating the Code” chapter will be useful in understanding the specific implementation of Python code. General Python errors that appear can be researched on Google or StackOverflow. Connection errors to eBay’s developer program can be researched on eBay’s documentation. The implementation of this data pipeline will allow for social search to collect up-to-date data on categories of interest across eBay, and can be edited for more specific use-cases.</p>
 </div>
 </div>
 
