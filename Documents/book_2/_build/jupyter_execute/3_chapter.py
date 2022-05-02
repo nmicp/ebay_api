@@ -653,7 +653,7 @@
 # 
 # <code>scancel <jobid></code> Cancel a single job 
 # 
-# For more information about slurm files and scheduling these jobs, check out these following websites <a href=" https://slurm.schedmd.com/pdfs/summary.pdf"> Cheat sheet Slurm Workload Manager </a> , <a href=" https://docs.rc.fas.harvard.edu/kb/convenient-slurm-commands/">Convenient SLURM Commands</a>, and  <a href=" https://slurm.schedmd.com/sbatch.html "> Slurm Documentation </a>
+# For more information about slurm files and scheduling these jobs, check out these following websites <a href="https://slurm.schedmd.com/pdfs/summary.pdf"> Cheat sheet Slurm Workload Manager</a> , <a href="https://docs.rc.fas.harvard.edu/kb/convenient-slurm-commands/">Convenient SLURM Commands</a>, and  <a href="https://slurm.schedmd.com/sbatch.html "> Slurm Documentation </a>
 # 
 # 
 
@@ -685,7 +685,7 @@
 # 8.	You can now make queries through a dropdown menu and download the csv file
 # 
 # 
-# Rivanna is the University of Virginia’s high performance computing platform. This means that instead of using your local computer and storage, you can work and share files on this platform. When we are working with a lot of data — like in the case of this automated data pipeline — Rivanna provides more storage and a centralized place to collaborate. To log onto Rivanna, go to UVA’s research computing website and select <a href=" https://www.rc.virginia.edu/userinfo/rivanna/login/ ">Rivanna</a>
+# Rivanna is the University of Virginia’s high performance computing platform. This means that instead of using your local computer and storage, you can work and share files on this platform. When we are working with a lot of data — like in the case of this automated data pipeline — Rivanna provides more storage and a centralized place to collaborate. To log onto Rivanna, go to UVA’s research computing website and select <a href="https://www.rc.virginia.edu/userinfo/rivanna/login/ ">Rivanna</a>
 # 
 # 
 # There, click on the link that says “Launch Open OnDemand”. Log into this system with your UVA ID and associated password. Once on Rivanna, click on “My Interactive Session” on the top menu bar. Then, we can select which Interactive App you would like to use. For this project, we mainly use JupyterLab — a coding interface typically used for Python. We will also use the Desktop application to access the high-level dashboard we create. When using Rivanna, you have the option of customizing the number of hours you plan on working on the system, as well as the number of cores you would need. 

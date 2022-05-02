@@ -7,7 +7,7 @@
 
 # 1. Login in Rivanna:
 # 
-#     A. Click  <a href= “https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard” target="_blank">Initialize the interactive session</a>
+#     A. Click  <a href="https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard">Initialize the interactive session</a>
 #     
 #     B. Use **JupyterLab**
 #     
@@ -42,7 +42,7 @@
 
 # 1. Login in Rivanna: 
 # 
-#       A. Click  <a href= “https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard” target="_blank">Initialize the interactive session</a>
+#       A. Click  Click  <a href="https://rivanna-portal.hpc.virginia.edu/pun/sys/dashboard">Initialize the interactive session</a>
 #     
 #       B. Open **RStudio Server**
 #       

@@ -3,13 +3,13 @@
 
 # ## **About the Authors**
 # 
-# <a href= “https://www.linkedin.com/in/elizabethwklee/” target="_blank">Elizabeth Lee</a> graduated from the University of Virginia with a Masters of Science in Data Science in 2022. 
+# <a href="https://www.linkedin.com/in/elizabethwklee/">Elizabeth Lee</a> graduated from the University of Virginia with a Masters of Science in Data Science in 2022. 
 # 
-# <a href= “https://www.linkedin.com/in/karolinanaranjo/”  target="_blank">Karolina Naranjo-Velasco</a> from the University of Virginia with a Masters of Science in Data Science in 2022. 
+# <a href="https://www.linkedin.com/in/karolinanaranjo/">Karolina Naranjo-Velasco</a> graduated from the University of Virginia with a Masters of Science in Data Science in 2022. 
 # 
-# <a href= “https://www.linkedin.com/in/nicholasylandi/” target="_blank">Nicholas Landi</a> graduated from the University of Virginia with a Masters of Science in Data Science in 2022. 
+# <a href="https://www.linkedin.com/in/nicholasylandi/">Nicholas Landi</a> graduated from the University of Virginia with a Masters of Science in Data Science in 2022. 
 # 
-# <a href= “https://www.linkedin.com/in/felipe-barraza-/” target="_blank">Felipe Barraza </a> from the University of Virginia with a Masters of Science in Data Science in 2022.
+# <a href= “https://www.linkedin.com/in/felipe-barraza-/”>Felipe Barraza</a> graduated from the University of Virginia with a Masters of Science in Data Science in 2022.
 
 # ### **Acknowledgements**
 # 
