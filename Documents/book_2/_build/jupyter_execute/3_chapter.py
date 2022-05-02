@@ -666,13 +666,16 @@
 # Before accessing the drop-down menu and high-level dashboard, you would need to import the datasette module. This module is open source, and can be imported on Rivanna. In the overview below, steps 1-2 walk through installing this module. Steps 3-8 are for accessing and parsing through the data. 
 # 
 # ***High level datasette.io procedure***
-# 1.	Log onto Rivanna
-# 2.	If first time importing module start here, if not skip to step 3:
-# a.	Start a session on Jupyter session on project space
-# b.	Open a terminal 
-# c.	Make sure you are in your home directory (cd)
-# d.	Type in “pip install --user datasette”
-# i.	Should be installed in home directory
+# 1. Log onto Rivanna
+# 2. If first time importing module start here:
+#         A. Start a session on Jupyter session on project space
+#         B. Open a terminal 
+#         C. Make sure you are in your home directory (cd)
+#         D. Type in “pip install --user datasette”
+#         E. Should be installed in home directory
+#     
+#    if not skip to step 3
+#    
 # 3.	Start a Desktop session on Rivanna
 # 4.	Open a terminal window 
 # 5.	Type in this: ~/.local/bin/datasette “/path-to-database/database-name.db”
@@ -750,4 +753,10 @@
 
 # ### **Final Remarks**
 # 
-# This documentation provides a detailed and comprehensive overview of the implementation of a data pipeline for social research. This data pipeline makes a connection to eBay’s developer’s program, connects to the appropriate APIs, collects data, and stores data. This pipeline also provides a dashboard for accessing and saving the data for future works. When editing the data pipeline, the “Navigating the Code” chapter will be useful in understanding the specific implementation of Python code. General Python errors that appear can be researched on Google or StakeOverflow. Connection errors to eBay’s developer program can be researched on eBay’s documentation. The implementation of this data pipeline will allow for social search to collect up-to-date data on categories of interest across eBay, and can be edited for more specific use-cases. 
+# This documentation provides a detailed and comprehensive overview of the implementation of a data pipeline for social research. This data pipeline makes a connection to eBay’s developer’s program, connects to the appropriate APIs, collects data, and stores data. This pipeline also provides a dashboard for accessing and saving the data for future works. When editing the data pipeline, the “Navigating the Code” chapter will be useful in understanding the specific implementation of Python code. General Python errors that appear can be researched on Google or StackOverflow. Connection errors to eBay’s developer program can be researched on eBay’s documentation. The implementation of this data pipeline will allow for social search to collect up-to-date data on categories of interest across eBay, and can be edited for more specific use-cases. 
+
+# In[ ]:
+
+
+
+
