@@ -1,11 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## **Appendix A**
-# 
-# 
-# Categories Table
-# 
+# ## **Categories Table - Appendix A**
 # 
 # 
 # This table contains the category and corresponding category ID of the data pipeline. 
@@ -55,3 +51,9 @@
 # |     Decorative Pottery &   Glassware      |     262384         |
 # |     Other Pottery & Glass                 |     262365         |
 # 
+
+# In[ ]:
+
+
+
+

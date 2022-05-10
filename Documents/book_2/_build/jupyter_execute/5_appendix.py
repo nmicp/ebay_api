@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## **Appendix B**
+# ## **Access to Rivanna - Appendix B**
 
 # ###  **Instructions for Navigating and Accessing to Rivanna**
 

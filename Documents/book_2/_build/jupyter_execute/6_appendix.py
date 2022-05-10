@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# ## **Appendix C** 
+# ## **Navigate in the Project Space - Appendix C** 
 # 
 # 
 # This file should help navigate the folders in the "nmicp" project space on Rivanna
@@ -70,3 +70,15 @@
 # 
 # ### ebay_data_4_27.csv
 # Data collected from UVA Capstone team before automation is restarted in this nmicp space. Data is collected until 4-26-2022. 
+# 
+# ### r_database_connection.R
+# R file that connects to the database on Rivanna. This is another way to connect to the database to use the data in R for analysis. 
+# 
+# ### SettingUpNewDatabase.ipynb
+# This notebook is the code for setting up a new database for when we moved the data collection process from the capstone team space to the nmicp project space. This code can be used to set up a new database in a new project space.
+
+# In[ ]:
+
+
+
+

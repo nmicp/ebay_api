@@ -23,5 +23,5 @@
 # 
 # Finally, the third chapter focuses on the specific implementation of the data pipeline architecture in python. This chapter includes a step-by-step guide on how to obtain this data from a recursive script, and also a tutorial to run these activities from the Rivanna UVA platform that facilitates the data storage systems. The result of this data pipeline framework is a replicable blueprint for interacting with an online marketplace’s API environment. This project will act as a precursor to begin research regarding the global trade of illicit cultural property through subsequent network and spatial analysis. 
 # 
-# The updated version of this manual is 2022-05-01. 
+# The updated version of this manual is 2022-05-10. 
 # 

@@ -13,5 +13,4 @@
 
 # ### **Acknowledgements**
 # 
-# The authors would like to thank Professor Jonathan Kropko for his continuous feedback and support as an advisor throughout this project. The authors would also like to thank Professor Fiona Greenland and Professor Michelle Fabiani for sponsoring this capstone project and providing their subject- area expertise when necessary. Finally, the authors would like to thank Jacalyn Huband, Ph.D., Computational Research Support Specialist at the University of Virginia, for her support in navigating high-performance computing.
-# 
+# The authors would like to thank Professor Jonathan Kropko for his continuous feedback and support as an advisor throughout this project. The authors would also like to thank Professor Fiona Greenland and Professor Michelle Fabiani for sponsoring this capstone project and providing their subject- area expertise when necessary. Finally, the authors would like to acknowledge Research Computing at The University of Virginia for providing computational resources and technical support that have contributed to the results reported within this publication. URL: https://rc.virginia.edu
