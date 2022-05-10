@@ -9,7 +9,7 @@
 # 
 # <a href="https://www.linkedin.com/in/nicholasylandi/">Nicholas Landi</a> graduated from the University of Virginia with a Masters of Science in Data Science in 2022. 
 # 
-# <a href= “https://www.linkedin.com/in/felipe-barraza-/”>Felipe Barraza</a> graduated from the University of Virginia with a Masters of Science in Data Science in 2022.
+# <a href= "https://www.linkedin.com/in/felipe-barraza-/">Felipe Barraza</a> graduated from the University of Virginia with a Masters of Science in Data Science in 2022.
 
 # ### **Acknowledgements**
 # 

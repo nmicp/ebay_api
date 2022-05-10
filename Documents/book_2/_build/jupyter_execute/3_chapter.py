@@ -668,20 +668,31 @@
 # ***High level datasette.io procedure***
 # 1. Log onto Rivanna
 # 2. If first time importing module start here:
-#         A. Start a session on Jupyter session on project space
-#         B. Open a terminal 
-#         C. Make sure you are in your home directory (cd)
-#         D. Type in “pip install --user datasette”
-#         E. Should be installed in home directory
+#       
+#       A. Start a session on Jupyter session on project space
+#         
+#       B. Open a terminal 
+#         
+#       C. Make sure you are in your home directory (cd)
+#         
+#       D. Type in “pip install --user datasette”
+#         
+#       E. Should be installed in home directory
 #     
 #    if not skip to step 3
 #    
 # 3.	Start a Desktop session on Rivanna
+# 
 # 4.	Open a terminal window 
+# 
 # 5.	Type in this: ~/.local/bin/datasette “/path-to-database/database-name.db”
-# a.	Make sure you include the first slash and double quotes!
+# 
+#     a.	Make sure you include the first slash and double quotes!
+#     
 # 6.	It should start a port local connection. Copy connection link and open in firefox
+# 
 # 7.	Click on table name in datasette.io interface
+# 
 # 8.	You can now make queries through a dropdown menu and download the csv file
 # 
 # 
