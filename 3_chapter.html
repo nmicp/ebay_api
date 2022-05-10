@@ -53,7 +53,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script async="async" src="_static/sphinx-thebe.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Appendix A" href="4_appendix.html" />
+    <link rel="next" title="Categories Table - Appendix A" href="4_appendix.html" />
     <link rel="prev" title="Getting Started with eBay’s APIs" href="2_chapter.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -123,21 +123,21 @@ const thebe_selector_output = ".output, .cell_output"
  <li class="toctree-l1">
   <a class="reference internal" href="4_appendix.html">
    <strong>
-    Appendix A
+    Categories Table - Appendix A
    </strong>
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="5_appendix.html">
    <strong>
-    Appendix B
+    Access to Rivanna - Appendix B
    </strong>
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="6_appendix.html">
    <strong>
-    Appendix C
+    Navigate in the Project Space - Appendix C
    </strong>
   </a>
  </li>
@@ -541,6 +541,8 @@ const thebe_selector_output = ".output, .cell_output"
 <p>Next, we dive into the overall architecture of the data pipeline. The architecture of our extraction and processing pipeline is encapsulated in a try block. We implement a try-except block in case the pipeline runs into any errors. At the end of this script, we discuss what the except blocks we implement catch. The try block runs the code, and execution only jumps to the except block if there are any errors.</p>
 <p>We collect the corresponding data through a function we defined as <code>geteBay</code>. This function uses the Finding API to collect our initial set of features discussed in our data description. The automated nature of our data collection also stems from this section as we collect data from the past day of listings. The <code>geteBay</code> function parses through a list of predefined categories. This function also takes a <code>starttime</code> parameter that specifies the earliest time to collect listings from.</p>
 <p>The user-defined url and headers variables are used to authenticate the connection to the Finding API and its <code>findItemsByCategory</code> function. We also initialize <code>categorydf</code> dataframe that will append data to <code>item</code>. Next, we create a <code>params</code> object that defines the output of the API call. This includes the category ID,  entries per page, number of pages, and listing time. Finally, we call the API with the constructed parameters.</p>
+<div class="alert alert-block alert-info"><b>Changing Categories:</b>The pipeline is currently set up to extract 1 page (100 listings) from each category. The call limit is 5,000 calls per day, so the maximum number of category ids should be 50. Not all these categories will have 100 new listings posted daily, so that is why our average daily rate is somewhere between 2000-3000. However, if we increase the number of category id’s to, for example, 55 and all these categories have 100 new items, then the API connection will crash due to the call limit exceeding 5,000. If researchers are interested in fewer categories, they will need to edit line 72 in eBay_datacollection.py (this is not advised, but can be completed if necessary) to optimize the number of listings captured. 
+<p>Currently <strong>line 72</strong> starts  <code>for i in range(1,2)</code> and is configured to capture 1 page of data per listing. The second number in the range() statement is not inclusive. If the researchers wanted to mine 10 categories, then they could change line 72 to: for i in range(1,6). This will collect up to 5 pages for each category: there are a maximum of 100 items per page, so (10 categories x 5 pages per category x 100 listings per page) should theoretically optimize the call limit.</div></p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span>
 <span class="c1">#--- BEGIN TRY BLOCK</span>
 <span class="k">try</span><span class="p">:</span>
@@ -1076,7 +1078,7 @@ This specifies the user’s associated email address to be notified when a faile
     <a class='right-next' id="next-link" href="4_appendix.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><strong>Appendix A</strong></p>
+        <p class="prev-next-title"><strong>Categories Table - Appendix A</strong></p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
